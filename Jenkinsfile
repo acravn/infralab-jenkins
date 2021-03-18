@@ -1,11 +1,15 @@
-@Library('test-library')_
-pipeline {
-    agent any
-    stages {
-        stage('Stage 1') {
-            steps {
-                helloworld
-            }
-        }
+def code
+
+node('worker') {
+    stage('Checkout') {
+        checkout scm
+    }
+
+    stage('Load') {
+        code = load 'vars/helloworld.groovy'
+    }
+
+    stage('Run') {
+        code.helloworld()
     }
 }

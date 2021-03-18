@@ -1,5 +1,7 @@
 #!/usr/bin/env groovy
 
-def call() {
+def helloworld() {
     echo "hello world from groovy"
 }
+
+return this

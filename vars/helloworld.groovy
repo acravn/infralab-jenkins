@@ -5,7 +5,7 @@ def helloworld(region) {
 
     println region
 
-    def ids = sh(script: "aws ec2 describe-volumes --region us-east-1 --query \'Volumes[*].VolumeId\'', returnStdout: true")
+    def ids = sh(script: 'aws ec2 describe-volumes --region us-east-1 --query \'Volumes[*].VolumeId\'', returnStdout: true)
     def list = new JsonSlurper().parseText(ids)
 
     for(item in list) {

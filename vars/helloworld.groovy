@@ -2,7 +2,7 @@
 
 def helloworld() {
     echo "hello world from groovy"
-    sh 'aws ec2 describe-volumes --query \'Volumes[*].VolumeId\''
+    sh 'aws ec2 describe-volumes --region us-east-1 --query \'Volumes[*].VolumeId\''
 }
 
 return this

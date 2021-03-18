@@ -11,4 +11,8 @@ def helloworld(region) {
     }
 }
 
+def testStringSplit(String test) {
+    println test
+}
+
 return this

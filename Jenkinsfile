@@ -10,6 +10,6 @@ node('worker') {
     }
 
     stage('Run') {
-        code.testStringSplit("test.com/charter/nvis-cmm-retriever")
+        code.test2()
     }
 }

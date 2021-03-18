@@ -12,7 +12,10 @@ def helloworld(region) {
 }
 
 def testStringSplit(String test) {
-    println test
+
+    def splitSt = test.split('/')
+
+    println(splitSt[0] + " " + splitSt[-1])
 }
 
 return this

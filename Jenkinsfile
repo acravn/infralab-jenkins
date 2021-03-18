@@ -10,6 +10,6 @@ node('worker') {
     }
 
     stage('Run') {
-        code.helloworld()
+        code.helloworld("us-east-1")
     }
 }

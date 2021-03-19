@@ -13,7 +13,7 @@ pipeline {
         stage('Load groovy') {
             steps {
                 script {
-                    code = load 'vars/helloworld'
+                    code = load 'vars/helloworld.groovy'
                     code.test2()
                 }
             }

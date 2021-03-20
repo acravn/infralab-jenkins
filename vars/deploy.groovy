@@ -5,11 +5,15 @@ def call() {
         agent any
         stages {
             stage('Checkout SCM') {
-                checkout scm
+                script {
+                    checkout scm
+                }
             }
 
             stage('Run Stuff') {
-                helloworld.test2()
+                script {
+                    helloworld.test2()
+                }
             }
         }
     }

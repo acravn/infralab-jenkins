@@ -5,7 +5,7 @@ def call() {
         agent any
         stages {
             stage('Checkout SCM') {
-                steps{
+                steps {
                     script {
                         checkout scm
                     }
@@ -18,7 +18,6 @@ def call() {
                         helloworld.test2()
                     }
                 }
-
             }
         }
     }
